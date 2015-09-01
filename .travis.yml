@@ -8,4 +8,6 @@ after_success: ./vendor/bin/phing report-to-coveralls
 notifications:
   email:
     recipients:
-      - johndoe@example.com
+      - jonas@cultuurnet.be
+      - kristof@2dotstwice.be
+  slack: cnet:UzmZZjVck1RNHTyrTSe6NTd9
