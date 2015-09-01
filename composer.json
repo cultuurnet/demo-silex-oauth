@@ -1,10 +1,12 @@
 {
-    "name": "vendor/package",
-    "description": "Brief description of this PHP library",
+    "name": "cultuurnet/demo-silex-oauth",
+    "description": "Demo app to illustrate functionality of the cultuurnet/symfony-security-oauth lib.",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [],
-    "require": {},
+    "require": {
+      "cultuurnet/symfony-security-oauth": "~1.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "~4.7",
         "squizlabs/php_codesniffer": "~2.3",
@@ -13,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Vendor\\Package\\": "src/"
+            "CultuurNet\\DemoSilexOAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vendor\\Package\\": "test/"
+            "CultuurNet\\DemoSilexOAuth\\": "test/"
         }
     },
     "minimum-stability": "dev",
