@@ -5,7 +5,8 @@
     "license": "Apache-2.0",
     "authors": [],
     "require": {
-      "cultuurnet/symfony-security-oauth": "~0.1"
+      "cultuurnet/symfony-security-oauth": "~0.1",
+      "silex/silex": "~1.3"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.7",
