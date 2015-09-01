@@ -1,7 +1,7 @@
 {
     "name": "cultuurnet/demo-silex-oauth",
     "description": "Demo app to illustrate functionality of the cultuurnet/symfony-security-oauth lib.",
-    "type": "library",
+    "type": "project",
     "license": "Apache-2.0",
     "authors": [],
     "require": {
