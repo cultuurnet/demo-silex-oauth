@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth.git",
-                "reference": "0f46b3ffc258be670f80f8d989f902ab96813afc"
+                "reference": "577d05e7e3c570f2148e44aff1ab21422651e07b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/0f46b3ffc258be670f80f8d989f902ab96813afc",
-                "reference": "0f46b3ffc258be670f80f8d989f902ab96813afc",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/577d05e7e3c570f2148e44aff1ab21422651e07b",
+                "reference": "577d05e7e3c570f2148e44aff1ab21422651e07b",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
                 }
             ],
             "description": "Brief description of this PHP library",
-            "time": "2015-09-09 10:55:27"
+            "time": "2015-09-09 12:10:36"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-uitid",
