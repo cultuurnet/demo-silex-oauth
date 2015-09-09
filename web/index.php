@@ -3,6 +3,7 @@ use CultuurNet\Auth\ConsumerCredentials;
 use CultuurNet\SymfonySecurityOAuth\Security\OAuthAuthenticationProvider;
 use CultuurNet\SymfonySecurityOAuth\Security\OAuthListener;
 use CultuurNet\SymfonySecurityOAuth\Service\OAuthServerService;
+use CultuurNet\SymfonySecurityOAuth\Service\Signature\OAuthHmacSha1Signature;
 use CultuurNet\SymfonySecurityOAuthUitid\ConsumerProvider;
 use CultuurNet\SymfonySecurityOAuthUitid\NonceProvider;
 use CultuurNet\SymfonySecurityOAuthUitid\TokenProvider;
@@ -12,6 +13,12 @@ use DerAlex\Silex\YamlConfigServiceProvider;
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
+
+$app['debug'] = true;
+
+if (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+    $_SERVER['HTTP_AUTHORIZATION'] = $_SERVER['REDIRECT_HTTP_AUTHORIZATION'];
+}
 
 $app->register(new YamlConfigServiceProvider(__DIR__ . '/../config.yml'));
 
@@ -41,7 +48,11 @@ $app['oauth.service.oauth_server_service'] = $app->share(function () use ($app) 
     $consumerProvider = $app['oauth.model.provider.consumer_provider'];
     $tokenProvider = $app['oauth.model.provider.token_provider'];
     $nonceProvider = $app['oauth.model.provider.nonce_provider'];
-    return new OAuthServerService($consumerProvider, $tokenProvider, $nonceProvider);
+    $serverService =  new OAuthServerService($consumerProvider, $tokenProvider, $nonceProvider);
+    $hmacsha1Service = new OAuthHmacSha1Signature();
+    $serverService->addSignatureService($hmacsha1Service);
+
+    return $serverService;
 });
 
 $app['security.authentication_listener.factory.oauth'] = $app->protect(function ($name, $options) use ($app) {
@@ -85,6 +96,10 @@ $app['oauth.request_listener'] = $app->share(function() {
 
 $app['dispatcher']->addListener('kernel.request', array($app['oauth.request_listener'], 'onEarlyKernelRequest'), 255);
 
-$app->get('test', function () { return new \Symfony\Component\HttpFoundation\Response();} );
+$app->get('/test', function ($app) { return new \Symfony\Component\HttpFoundation\Response();} );
+
+$app->get('/hello/{name}', function ($name) use ($app) {
+    return 'Hello '.$app->escape($name);
+});
 
 $app->run();
