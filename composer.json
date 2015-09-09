@@ -3,11 +3,25 @@
     "description": "Demo app to illustrate functionality of the cultuurnet/symfony-security-oauth lib.",
     "type": "project",
     "license": "Apache-2.0",
-    "authors": [],
+    "authors": [
+      {
+        "name": "Nicolas Leroy",
+        "email": "nicolas.leroy@gmail.com"
+      },
+      {
+        "name": "Jonas Verhaeghe",
+        "email": "Jonas@cultuurnet.be"
+      },
+      {
+        "name": "Kristof Coomans",
+        "email": "kristof@2dotstwice.be"
+      }
+    ],
     "require": {
       "cultuurnet/symfony-security-oauth": "dev-feature/III-413",
       "silex/silex": "~1.3",
-      "deralex/yaml-config-service-provider": "~1.0.1"
+      "deralex/yaml-config-service-provider": "~1.0.1",
+      "cultuurnet/symfony-security-oauth-uitid": "~0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.7",
@@ -22,7 +36,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "CultuurNet\\DemoSilexOAuth\\": "test/"
+            "CultuurNet\\DemoSilexOAuth\\": "tests/"
         }
     },
     "minimum-stability": "dev",
