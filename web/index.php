@@ -9,6 +9,7 @@ use CultuurNet\SymfonySecurityOAuthUitid\NonceProvider;
 use CultuurNet\SymfonySecurityOAuthUitid\TokenProvider;
 use CultuurNet\UitidCredentials\UitidCredentialsFetcher;
 use DerAlex\Silex\YamlConfigServiceProvider;
+use Silex\Application;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
@@ -96,7 +97,7 @@ $app['oauth.request_listener'] = $app->share(function() {
 
 $app['dispatcher']->addListener('kernel.request', array($app['oauth.request_listener'], 'onEarlyKernelRequest'), 255);
 
-$app->get('/test', function ($app) { return new \Symfony\Component\HttpFoundation\Response();} );
+$app->get('/test', function (Application $app) { return new \Symfony\Component\HttpFoundation\Response();} );
 
 $app->get('/hello/{name}', function ($name) use ($app) {
     return 'Hello '.$app->escape($name);
