@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7877f863fd9becf773ea83ab1330ba61",
+    "hash": "01438c48c90781c0880d172dfbc40333",
     "packages": [
         {
             "name": "cultuurnet/auth",
@@ -54,26 +54,68 @@
             "time": "2015-08-24 20:22:37"
         },
         {
+            "name": "cultuurnet/clock",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cultuurnet/clock.git",
+                "reference": "601aaf46375fffd3d3367a866253ca6bb092f584"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cultuurnet/clock/zipball/601aaf46375fffd3d3367a866253ca6bb092f584",
+                "reference": "601aaf46375fffd3d3367a866253ca6bb092f584",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CultuurNet\\Clock\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kristof Coomans",
+                    "email": "kristof@2dotstwice.be"
+                }
+            ],
+            "description": "Clock abstraction library",
+            "time": "2015-06-08 16:12:34"
+        },
+        {
             "name": "cultuurnet/symfony-security-oauth",
             "version": "dev-feature/III-413",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth.git",
-                "reference": "577d05e7e3c570f2148e44aff1ab21422651e07b"
+                "reference": "2bc40bce7585d8f5258d914f361c20a3342f7b7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/577d05e7e3c570f2148e44aff1ab21422651e07b",
-                "reference": "577d05e7e3c570f2148e44aff1ab21422651e07b",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/2bc40bce7585d8f5258d914f361c20a3342f7b7c",
+                "reference": "2bc40bce7585d8f5258d914f361c20a3342f7b7c",
                 "shasum": ""
             },
             "require": {
-                "cultuurnet/uitid-credentials": "~0.1",
+                "cultuurnet/clock": "~0.1",
                 "symfony/security": "~2.7.3"
             },
             "require-dev": {
                 "phing/phing": "~2.11",
-                "phpunit/phpunit": "~4.7",
+                "phpunit/php-token-stream": "1.4.6",
+                "phpunit/phpunit": "~4.8",
                 "satooshi/php-coveralls": "~0.7",
                 "squizlabs/php_codesniffer": "~2.3"
             },
@@ -107,7 +149,49 @@
                 }
             ],
             "description": "Brief description of this PHP library",
-            "time": "2015-09-09 12:10:36"
+            "time": "2015-09-15 11:29:02"
+        },
+        {
+            "name": "cultuurnet/symfony-security-oauth-redis",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cultuurnet/symfony-security-oauth-redis.git",
+                "reference": "f4eabdff80f5da0c94507449fa3032c19925e842"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-redis/zipball/f4eabdff80f5da0c94507449fa3032c19925e842",
+                "reference": "f4eabdff80f5da0c94507449fa3032c19925e842",
+                "shasum": ""
+            },
+            "require": {
+                "cultuurnet/symfony-security-oauth": "dev-feature/III-413"
+            },
+            "require-dev": {
+                "phing/phing": "~2.11",
+                "phpunit/php-token-stream": "1.4.6",
+                "phpunit/phpunit": "~4.8",
+                "satooshi/php-coveralls": "~0.7",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CultuurNet\\SymfonySecurityOAuthRedis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Implementations for interfaces provided by cultuurnet/symfony-security-oauth based on Redis storage",
+            "time": "2015-09-15 10:24:07"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-uitid",
@@ -115,12 +199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth-uitid.git",
-                "reference": "c3c2dfaa7977d770cb4388b422d17c64452a9a47"
+                "reference": "80203fb5222c49bacdef25df9099e4c952d40d68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-uitid/zipball/c3c2dfaa7977d770cb4388b422d17c64452a9a47",
-                "reference": "c3c2dfaa7977d770cb4388b422d17c64452a9a47",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-uitid/zipball/80203fb5222c49bacdef25df9099e4c952d40d68",
+                "reference": "80203fb5222c49bacdef25df9099e4c952d40d68",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +247,7 @@
                 }
             ],
             "description": "The UiTiD implementation for the SymfonySecurityOAuth component",
-            "time": "2015-09-09 11:43:10"
+            "time": "2015-09-09 14:29:05"
         },
         {
             "name": "cultuurnet/uitid-credentials",
@@ -1343,16 +1427,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c"
+                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2d7c03c0e4e080901b8f33b2897b0577be18a13c",
-                "reference": "2d7c03c0e4e080901b8f33b2897b0577be18a13c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
                 "shasum": ""
             },
             "require": {
@@ -1401,7 +1485,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-04 03:42:39"
+            "time": "2015-09-14 06:51:16"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1534,16 +1618,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.6",
+            "version": "1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b"
+                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
-                "reference": "3ab72c62e550370a6cd5dc873e1a04ab57562f5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
+                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
                 "shasum": ""
             },
             "require": {
@@ -1579,20 +1663,20 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-08-16 08:51:00"
+            "time": "2015-09-15 10:49:45"
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.6",
+            "version": "4.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357"
+                "reference": "dab2ada9e9a503d2ec3c32fe0fb59dea9bdd9dfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2246830f4a1a551c67933e4171bf2126dc29d357",
-                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/dab2ada9e9a503d2ec3c32fe0fb59dea9bdd9dfa",
+                "reference": "dab2ada9e9a503d2ec3c32fe0fb59dea9bdd9dfa",
                 "shasum": ""
             },
             "require": {
@@ -1651,7 +1735,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-24 04:09:38"
+            "time": "2015-09-14 06:57:22"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
