@@ -4,8 +4,8 @@ use CultuurNet\SymfonySecurityOAuth\Security\OAuthAuthenticationProvider;
 use CultuurNet\SymfonySecurityOAuth\Security\OAuthListener;
 use CultuurNet\SymfonySecurityOAuth\Service\OAuthServerService;
 use CultuurNet\SymfonySecurityOAuth\Service\Signature\OAuthHmacSha1Signature;
+use CultuurNet\SymfonySecurityOAuthRedis\NonceProvider;
 use CultuurNet\SymfonySecurityOAuthUitid\ConsumerProvider;
-use CultuurNet\SymfonySecurityOAuthUitid\NonceProvider;
 use CultuurNet\SymfonySecurityOAuthUitid\TokenProvider;
 use CultuurNet\UitidCredentials\UitidCredentialsFetcher;
 use DerAlex\Silex\YamlConfigServiceProvider;
@@ -41,8 +41,17 @@ $app['oauth.model.provider.token_provider'] = $app->share(function ($app) {
     return new TokenProvider($app['oauth.fetcher']);
 });
 
-$app['oauth.model.provider.nonce_provider'] = $app->share(function () {
-    return new NonceProvider();
+$app['predis.client'] = $app->share(function ($app) {
+    $redisURI = isset($app['config']['redis']['uri']) ?
+        $app['config']['redis']['uri'] : 'tcp://127.0.0.1:6379';
+
+    return new Predis\Client($redisURI);
+});
+
+$app['oauth.model.provider.nonce_provider'] = $app->share(function (Application $app) {
+    return new NonceProvider(
+        $app['predis.client']
+    );
 });
 
 $app['oauth.service.oauth_server_service'] = $app->share(function () use ($app) {

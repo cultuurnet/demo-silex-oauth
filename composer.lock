@@ -100,12 +100,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth.git",
-                "reference": "2bc40bce7585d8f5258d914f361c20a3342f7b7c"
+                "reference": "90706f0daa01c52aebaae34cb242c90af01ae0f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/2bc40bce7585d8f5258d914f361c20a3342f7b7c",
-                "reference": "2bc40bce7585d8f5258d914f361c20a3342f7b7c",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/90706f0daa01c52aebaae34cb242c90af01ae0f4",
+                "reference": "90706f0daa01c52aebaae34cb242c90af01ae0f4",
                 "shasum": ""
             },
             "require": {
@@ -149,7 +149,7 @@
                 }
             ],
             "description": "Brief description of this PHP library",
-            "time": "2015-09-15 11:29:02"
+            "time": "2015-09-15 13:41:52"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-redis",
@@ -157,16 +157,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth-redis.git",
-                "reference": "f4eabdff80f5da0c94507449fa3032c19925e842"
+                "reference": "6cd42c1feb39fb0caf4ba5e91869d4ca619f0ec2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-redis/zipball/f4eabdff80f5da0c94507449fa3032c19925e842",
-                "reference": "f4eabdff80f5da0c94507449fa3032c19925e842",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-redis/zipball/6cd42c1feb39fb0caf4ba5e91869d4ca619f0ec2",
+                "reference": "6cd42c1feb39fb0caf4ba5e91869d4ca619f0ec2",
                 "shasum": ""
             },
             "require": {
-                "cultuurnet/symfony-security-oauth": "dev-feature/III-413"
+                "cultuurnet/symfony-security-oauth": "dev-feature/III-413",
+                "predis/predis": "~1.0"
             },
             "require-dev": {
                 "phing/phing": "~2.11",
@@ -191,7 +192,7 @@
                 "Apache-2.0"
             ],
             "description": "Implementations for interfaces provided by cultuurnet/symfony-security-oauth based on Redis storage",
-            "time": "2015-09-15 10:24:07"
+            "time": "2015-09-15 13:54:49"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-uitid",
@@ -548,6 +549,56 @@
                 "dependency injection"
             ],
             "time": "2013-11-22 08:30:29"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/84060b9034d756b4d79641667d7f9efe1aeb8e04",
+                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete PHP client library for Redis",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2015-07-30 18:34:15"
         },
         {
             "name": "psr/log",
