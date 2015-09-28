@@ -157,12 +157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth-redis.git",
-                "reference": "6cd42c1feb39fb0caf4ba5e91869d4ca619f0ec2"
+                "reference": "b0dbba83ee4c086ebc8623c2d64becb71b21cd6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-redis/zipball/6cd42c1feb39fb0caf4ba5e91869d4ca619f0ec2",
-                "reference": "6cd42c1feb39fb0caf4ba5e91869d4ca619f0ec2",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-redis/zipball/b0dbba83ee4c086ebc8623c2d64becb71b21cd6f",
+                "reference": "b0dbba83ee4c086ebc8623c2d64becb71b21cd6f",
                 "shasum": ""
             },
             "require": {
@@ -170,6 +170,7 @@
                 "predis/predis": "~1.0"
             },
             "require-dev": {
+                "m6web/redis-mock": "~2.3",
                 "phing/phing": "~2.11",
                 "phpunit/php-token-stream": "1.4.6",
                 "phpunit/phpunit": "~4.8",
@@ -192,7 +193,7 @@
                 "Apache-2.0"
             ],
             "description": "Implementations for interfaces provided by cultuurnet/symfony-security-oauth based on Redis storage",
-            "time": "2015-09-15 13:54:49"
+            "time": "2015-09-17 15:05:56"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-uitid",

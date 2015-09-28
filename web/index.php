@@ -7,6 +7,7 @@ use CultuurNet\SymfonySecurityOAuth\Service\Signature\OAuthHmacSha1Signature;
 use CultuurNet\SymfonySecurityOAuthRedis\NonceProvider;
 use CultuurNet\SymfonySecurityOAuthUitid\ConsumerProvider;
 use CultuurNet\SymfonySecurityOAuthUitid\TokenProvider;
+use CultuurNet\SymfonySecurityOAuthRedis\TokenProviderCache;
 use CultuurNet\UitidCredentials\UitidCredentialsFetcher;
 use DerAlex\Silex\YamlConfigServiceProvider;
 use Silex\Application;
@@ -38,7 +39,7 @@ $app['oauth.model.provider.consumer_provider'] = $app->share(function ($app) {
 });
 
 $app['oauth.model.provider.token_provider'] = $app->share(function ($app) {
-    return new TokenProvider($app['oauth.fetcher']);
+    return new TokenProviderCache(new TokenProvider($app['oauth.fetcher']), $app['predis.client']);
 });
 
 $app['predis.client'] = $app->share(function ($app) {
