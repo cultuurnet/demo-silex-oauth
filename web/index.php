@@ -24,10 +24,6 @@ $app->register(new OAuthServiceProvider(), array(
     'oauth.fetcher.consumer' => $app['config']['oauth']['consumer'],
 ));
 
-$app['oauth.model.provider.consumer_provider'] = $app->share(function ($app) {
-    return new ConsumerProvider($app['oauth.fetcher']);
-});
-
 $app['oauth.model.provider.token_provider'] = $app->share(function ($app) {
     return new TokenProviderCache(new TokenProvider($app['oauth.fetcher']), $app['predis.client']);
 });
