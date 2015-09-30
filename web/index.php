@@ -1,8 +1,7 @@
 <?php
 use CultuurNet\SilexServiceProviderOAuth\OAuthServiceProvider;
+use CultuurNet\SymfonySecurityOAuth\Model\Provider\TokenProviderInterface;
 use CultuurNet\SymfonySecurityOAuthRedis\NonceProvider;
-use CultuurNet\SymfonySecurityOAuthUitid\ConsumerProvider;
-use CultuurNet\SymfonySecurityOAuthUitid\TokenProvider;
 use CultuurNet\SymfonySecurityOAuthRedis\TokenProviderCache;
 use DerAlex\Silex\YamlConfigServiceProvider;
 use Silex\Application;
@@ -24,10 +23,6 @@ $app->register(new OAuthServiceProvider(), array(
     'oauth.fetcher.consumer' => $app['config']['oauth']['consumer'],
 ));
 
-$app['oauth.model.provider.token_provider'] = $app->share(function ($app) {
-    return new TokenProviderCache(new TokenProvider($app['oauth.fetcher']), $app['predis.client']);
-});
-
 $app['predis.client'] = $app->share(function ($app) {
     $redisURI = isset($app['config']['redis']['uri']) ?
         $app['config']['redis']['uri'] : 'tcp://127.0.0.1:6379';
@@ -40,6 +35,13 @@ $app['oauth.model.provider.nonce_provider'] = $app->share(function (Application 
         $app['predis.client']
     );
 });
+
+$app->extend(
+    'oauth.model.provider.token_provider',
+    function (TokenProviderInterface $tokenProvider, Application $app) {
+        return new TokenProviderCache($tokenProvider, $app['predis.client']);
+    }
+);
 
 $app->register(new Silex\Provider\SecurityServiceProvider(), array(
   'security.firewalls' => array(
