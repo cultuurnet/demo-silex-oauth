@@ -20,15 +20,8 @@ if (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
 $app->register(new YamlConfigServiceProvider(__DIR__ . '/../config.yml'));
 
 $app->register(new OAuthServiceProvider(), array(
-    'fetcher' => array(
-        'config' => array(
-            'base_url' => $app['config']['oauth']['base_url'],
-            'consumer' => array(
-                'key' => $app['config']['oauth']['consumer']['key'],
-                'secret' => $app['config']['oauth']['consumer']['secret'],
-            )
-        )
-    )
+    'oauth.fetcher.base_url' => $app['config']['oauth']['base_url'],
+    'oauth.fetcher.consumer' => $app['config']['oauth']['consumer'],
 ));
 
 $app['oauth.model.provider.consumer_provider'] = $app->share(function ($app) {
