@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "01438c48c90781c0880d172dfbc40333",
-    "content-hash": "87df5665f50597b8bd7580ad3a6ec632",
+    "hash": "8fa74faede5ce5691540d0f01c471396",
+    "content-hash": "3117017afa2768ef07ae27c06b236211",
     "packages": [
         {
             "name": "cultuurnet/auth",
@@ -96,17 +96,61 @@
             "time": "2015-06-08 16:12:34"
         },
         {
+            "name": "cultuurnet/silex-service-provider-oauth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cultuurnet/silex-service-provider-oauth.git",
+                "reference": "65019ff8835414d2a5744e7b9507961505424325"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cultuurnet/silex-service-provider-oauth/zipball/65019ff8835414d2a5744e7b9507961505424325",
+                "reference": "65019ff8835414d2a5744e7b9507961505424325",
+                "shasum": ""
+            },
+            "require": {
+                "cultuurnet/symfony-security-oauth": "dev-feature/III-413",
+                "cultuurnet/symfony-security-oauth-redis": "~0.1",
+                "cultuurnet/symfony-security-oauth-uitid": "~0.1",
+                "silex/silex": "~1.3"
+            },
+            "require-dev": {
+                "phing/phing": "~2.11",
+                "phpunit/phpunit": "~4.7",
+                "satooshi/php-coveralls": "~0.7",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CultuurNet\\SilexServiceProviderOAuth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "A Silex service provider for our OAuth component.",
+            "time": "2015-09-29 13:54:13"
+        },
+        {
             "name": "cultuurnet/symfony-security-oauth",
             "version": "dev-feature/III-413",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth.git",
-                "reference": "8193774c7bdac928ed7bd1c73a8fbc931e83cacf"
+                "reference": "d5793b4e2842322d8ad4cf9e21a281650dbcd4f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/8193774c7bdac928ed7bd1c73a8fbc931e83cacf",
-                "reference": "8193774c7bdac928ed7bd1c73a8fbc931e83cacf",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/d5793b4e2842322d8ad4cf9e21a281650dbcd4f7",
+                "reference": "d5793b4e2842322d8ad4cf9e21a281650dbcd4f7",
                 "shasum": ""
             },
             "require": {
@@ -150,7 +194,7 @@
                 }
             ],
             "description": "Brief description of this PHP library",
-            "time": "2015-09-28 10:42:59"
+            "time": "2015-09-29 12:51:04"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-redis",
