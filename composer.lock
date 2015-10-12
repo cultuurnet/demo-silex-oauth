@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8fa74faede5ce5691540d0f01c471396",
-    "content-hash": "3117017afa2768ef07ae27c06b236211",
+    "hash": "120d1180a9b0a57a0068149b05a51d69",
+    "content-hash": "32533b60c43272c1c32dc12690c38e6f",
     "packages": [
         {
             "name": "cultuurnet/auth",
@@ -101,16 +101,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/silex-service-provider-oauth.git",
-                "reference": "65019ff8835414d2a5744e7b9507961505424325"
+                "reference": "9fea0344d0693f4a0affbc7564ef6713fbc86853"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/silex-service-provider-oauth/zipball/65019ff8835414d2a5744e7b9507961505424325",
-                "reference": "65019ff8835414d2a5744e7b9507961505424325",
+                "url": "https://api.github.com/repos/cultuurnet/silex-service-provider-oauth/zipball/9fea0344d0693f4a0affbc7564ef6713fbc86853",
+                "reference": "9fea0344d0693f4a0affbc7564ef6713fbc86853",
                 "shasum": ""
             },
             "require": {
-                "cultuurnet/symfony-security-oauth": "dev-feature/III-413",
+                "cultuurnet/symfony-security-oauth": "~0.1",
                 "cultuurnet/symfony-security-oauth-redis": "~0.1",
                 "cultuurnet/symfony-security-oauth-uitid": "~0.1",
                 "silex/silex": "~1.3"
@@ -137,20 +137,20 @@
                 "Apache-2.0"
             ],
             "description": "A Silex service provider for our OAuth component.",
-            "time": "2015-09-29 13:54:13"
+            "time": "2015-10-12 07:06:38"
         },
         {
             "name": "cultuurnet/symfony-security-oauth",
-            "version": "dev-feature/III-413",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth.git",
-                "reference": "d5793b4e2842322d8ad4cf9e21a281650dbcd4f7"
+                "reference": "86f79b197b2ae5bf49452987d6e98cbe27833fae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/d5793b4e2842322d8ad4cf9e21a281650dbcd4f7",
-                "reference": "d5793b4e2842322d8ad4cf9e21a281650dbcd4f7",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth/zipball/86f79b197b2ae5bf49452987d6e98cbe27833fae",
+                "reference": "86f79b197b2ae5bf49452987d6e98cbe27833fae",
                 "shasum": ""
             },
             "require": {
@@ -194,7 +194,7 @@
                 }
             ],
             "description": "Brief description of this PHP library",
-            "time": "2015-09-29 12:51:04"
+            "time": "2015-10-12 06:53:21"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-redis",
@@ -202,16 +202,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth-redis.git",
-                "reference": "ae1aa4f4bb49a1542004474c9f2ef50c0b8bce23"
+                "reference": "36fe1f91674901531e26b0fa05d9aeb9ed5dd401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-redis/zipball/ae1aa4f4bb49a1542004474c9f2ef50c0b8bce23",
-                "reference": "ae1aa4f4bb49a1542004474c9f2ef50c0b8bce23",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-redis/zipball/36fe1f91674901531e26b0fa05d9aeb9ed5dd401",
+                "reference": "36fe1f91674901531e26b0fa05d9aeb9ed5dd401",
                 "shasum": ""
             },
             "require": {
-                "cultuurnet/symfony-security-oauth": "dev-feature/III-413",
+                "cultuurnet/symfony-security-oauth": "~0.1",
                 "predis/predis": "~1.0"
             },
             "require-dev": {
@@ -238,7 +238,7 @@
                 "Apache-2.0"
             ],
             "description": "Implementations for interfaces provided by cultuurnet/symfony-security-oauth based on Redis storage",
-            "time": "2015-09-18 11:37:13"
+            "time": "2015-10-12 06:58:47"
         },
         {
             "name": "cultuurnet/symfony-security-oauth-uitid",
@@ -246,16 +246,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/symfony-security-oauth-uitid.git",
-                "reference": "84dd123e8e41a07a7be10d39ec679f2e72f7e98b"
+                "reference": "3dca08f927e26e716b2fb23e6a015633f906393b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-uitid/zipball/84dd123e8e41a07a7be10d39ec679f2e72f7e98b",
-                "reference": "84dd123e8e41a07a7be10d39ec679f2e72f7e98b",
+                "url": "https://api.github.com/repos/cultuurnet/symfony-security-oauth-uitid/zipball/3dca08f927e26e716b2fb23e6a015633f906393b",
+                "reference": "3dca08f927e26e716b2fb23e6a015633f906393b",
                 "shasum": ""
             },
             "require": {
-                "cultuurnet/symfony-security-oauth": "dev-feature/III-413",
+                "cultuurnet/symfony-security-oauth": "~0.1",
                 "cultuurnet/uitid-credentials": "~0.1"
             },
             "require-dev": {
@@ -294,7 +294,7 @@
                 }
             ],
             "description": "The UiTiD implementation for the SymfonySecurityOAuth component",
-            "time": "2015-09-18 11:21:22"
+            "time": "2015-10-12 07:05:01"
         },
         {
             "name": "cultuurnet/uitid-credentials",
@@ -302,12 +302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/uitid-credentials.git",
-                "reference": "9d743d092ffe6f5aae57f0cf2b692030cfd82a72"
+                "reference": "fc611fa74012bb07c1e35a1e38eaf12521c49ae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/uitid-credentials/zipball/9d743d092ffe6f5aae57f0cf2b692030cfd82a72",
-                "reference": "9d743d092ffe6f5aae57f0cf2b692030cfd82a72",
+                "url": "https://api.github.com/repos/cultuurnet/uitid-credentials/zipball/fc611fa74012bb07c1e35a1e38eaf12521c49ae4",
+                "reference": "fc611fa74012bb07c1e35a1e38eaf12521c49ae4",
                 "shasum": ""
             },
             "require": {
@@ -335,8 +335,22 @@
             "license": [
                 "Apache-2.0"
             ],
+            "authors": [
+                {
+                    "name": "Kristof Coomans",
+                    "email": "kristof@2dotstwice.be"
+                },
+                {
+                    "name": "Nicolas Leroy",
+                    "email": "nicolas.leroy@gmail.com"
+                },
+                {
+                    "name": "Jonas Verhaeghe",
+                    "email": "Jonas@cultuurnet.be"
+                }
+            ],
             "description": "Brief description of this PHP library",
-            "time": "2015-09-28 09:39:18"
+            "time": "2015-10-08 14:07:30"
         },
         {
             "name": "deralex/yaml-config-service-provider",
@@ -1524,16 +1538,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/eabf68b476ac7d0f73793aada060f1c1a9bf8979",
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979",
                 "shasum": ""
             },
             "require": {
@@ -1582,7 +1596,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-14 06:51:16"
+            "time": "2015-10-06 15:47:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1764,16 +1778,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.9",
+            "version": "4.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "73fad41adb5b7bc3a494bb930d90648df1d5e74b"
+                "reference": "00194eb95989190a73198390ceca081ad3441a7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/73fad41adb5b7bc3a494bb930d90648df1d5e74b",
-                "reference": "73fad41adb5b7bc3a494bb930d90648df1d5e74b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/00194eb95989190a73198390ceca081ad3441a7f",
+                "reference": "00194eb95989190a73198390ceca081ad3441a7f",
                 "shasum": ""
             },
             "require": {
@@ -1832,20 +1846,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-20 12:56:44"
+            "time": "2015-10-12 03:36:47"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.7",
+            "version": "2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/ac8e7a3db35738d56ee9a76e78a4e03d97628983",
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983",
                 "shasum": ""
             },
             "require": {
@@ -1888,7 +1902,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-08-19 09:14:08"
+            "time": "2015-10-02 06:51:40"
         },
         {
             "name": "satooshi/php-coveralls",
@@ -2199,16 +2213,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01"
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/bc37d50fea7d017d3d340f230811c9f1d7280af4",
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4",
                 "shasum": ""
             },
             "require": {
@@ -2246,7 +2260,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2014-10-06 09:23:50"
+            "time": "2015-10-12 03:26:01"
         },
         {
             "name": "sebastian/recursion-context",
@@ -2561,9 +2575,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "cultuurnet/symfony-security-oauth": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
